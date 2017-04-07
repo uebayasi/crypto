@@ -41,8 +41,13 @@ import (
 	"golang.org/x/net/context/ctxhttp"
 )
 
-// LetsEncryptURL is the Directory endpoint of Let's Encrypt CA.
+// LetsEncryptURL is the Directory endpoint in the production environment
+// of Let's Encrypt CA.
 const LetsEncryptURL = "https://acme-v01.api.letsencrypt.org/directory"
+
+// LetsEncryptStagingURL is the Directory endpoint in the staging environment
+// of Let's Encrypt CA.
+const LetsEncryptStagingURL = "https://acme-staging.api.letsencrypt.org/directory"
 
 const (
 	maxChainLen = 5       // max depth and breadth of a certificate chain
